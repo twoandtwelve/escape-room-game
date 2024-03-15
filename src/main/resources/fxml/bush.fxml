@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="740.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nz.ac.auckland.se206.controllers.BushController">
+   <children>
+      <ImageView fitHeight="562.0" fitWidth="753.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/bushScene.PNG" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="catToy" fitHeight="151.0" fitWidth="151.0" layoutX="205.0" layoutY="293.0" onMouseClicked="#clickToy" onMouseEntered="#onHoverInteractable" onMouseExited="#onLeaveInteractable" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/CatToy.PNG" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fx:id="note1" fitHeight="125.0" fitWidth="141.0" layoutX="376.0" layoutY="356.0" onMouseClicked="#clickNote1" onMouseEntered="#onHoverInteractable" onMouseExited="#onLeaveInteractable" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/Note1.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fx:id="backButton" fitHeight="89.0" fitWidth="101.0" layoutX="7.0" layoutY="21.0" onMouseClicked="#clickBack" onMouseEntered="#onHoverInteractable" onMouseExited="#onLeaveInteractable" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../images/Back.PNG" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1c002ece" height="42.0" layoutX="122.0" layoutY="14.0" stroke="WHITE" strokeType="INSIDE" width="114.0" />
+      <Label fx:id="timer" alignment="CENTER" layoutX="122.0" layoutY="14.0" prefHeight="42.0" prefWidth="114.0" text="00:00" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Copperplate" size="30.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>

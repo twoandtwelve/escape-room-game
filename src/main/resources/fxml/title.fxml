@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.MotionBlur?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<Pane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyPressed="#onPressKey" onMouseClicked="#onClickMouse" prefHeight="544.0" prefWidth="734.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nz.ac.auckland.se206.controllers.TitleController">
+   <children>
+      <ImageView fitHeight="571.0" fitWidth="772.0" layoutX="-14.0" layoutY="-11.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/Menu.PNG" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="130.0" fitWidth="344.0" layoutX="195.0" layoutY="96.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/TitleTextCosmic.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="146.0" fitWidth="549.0" layoutX="105.0" layoutY="191.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/TitleTextCatastrophe.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="movingTextLabel" layoutX="176.0" layoutY="329.0" prefHeight="55.0" prefWidth="419.0" text="Press Any Key To Continue" textAlignment="CENTER">
+         <font>
+            <Font name="Copperplate" size="30.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="0.8004750593824227" endY="0.7292161520190024" startX="0.12351543942992874">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.9342105388641357" green="0.9159011244773865" blue="0.3849293291568756" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.006711409395973154">
+                     <color>
+                        <Color red="0.9342105388641357" green="0.9159011244773865" blue="0.3849293291568756" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.9078947305679321" green="0.8832358717918396" blue="0.16812865436077118" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
+         <effect>
+            <Lighting>
+               <light>
+                  <Light.Distant>
+                     <color>
+                        <Color red="1.0" green="0.8773333430290222" blue="0.07999999821186066" />
+                     </color>
+                  </Light.Distant>
+               </light>
+               <bumpInput>
+                  <MotionBlur />
+               </bumpInput>
+            </Lighting>
+         </effect>
+      </Label>
+      <Label fx:id="movingTextCopyLabel" layoutX="-565.0" layoutY="329.0" prefHeight="55.0" prefWidth="419.0" text="Press Any Key To Continue" textAlignment="CENTER">
+         <font>
+            <Font name="Copperplate" size="30.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="0.8004750593824227" endY="0.7292161520190024" startX="0.12351543942992874">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.9342105388641357" green="0.9159011244773865" blue="0.3849293291568756" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.006711409395973154">
+                     <color>
+                        <Color red="0.9342105388641357" green="0.9159011244773865" blue="0.3849293291568756" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.9078947305679321" green="0.8832358717918396" blue="0.16812865436077118" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
+         <effect>
+            <Lighting>
+               <light>
+                  <Light.Distant>
+                     <color>
+                        <Color red="1.0" green="0.8773333430290222" blue="0.07999999821186066" />
+                     </color>
+                  </Light.Distant>
+               </light>
+               <bumpInput>
+                  <MotionBlur />
+               </bumpInput>
+            </Lighting>
+         </effect>
+      </Label>
+   </children>
+</Pane>

@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<Pane fx:id="room" focusTraversable="true" prefHeight="550.0" prefWidth="740.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nz.ac.auckland.se206.controllers.MainRoomController">
+   <children>
+      <ImageView fx:id="roomImage" fitHeight="550.0" fitWidth="740.0" pickOnBounds="true">
+         <image>
+            <Image url="@../images/MainScreen.PNG" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="rocketImage" disable="true" fitHeight="363.0" fitWidth="376.0" layoutX="33.0" layoutY="82.0" onMouseClicked="#clickRocket" onMouseEntered="#onHoverInteractable" onMouseExited="#onLeaveInteractable" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/RocketShip.PNG" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fx:id="pantryImage" disable="true" fitHeight="125.0" fitWidth="114.0" layoutX="339.0" layoutY="294.0" onMouseClicked="#clickPantry" onMouseEntered="#onHoverInteractable" onMouseExited="#onLeaveInteractable" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/PantryBuilding.PNG" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fx:id="catImageActive" fitHeight="173.0" fitWidth="205.0" layoutX="543.0" layoutY="294.0" onMouseClicked="#clickCatActive" onMouseEntered="#onHoverInteractable" onMouseExited="#onLeaveInteractable" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../images/NeutralCat.PNG" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <Pane fx:id="chatPane" layoutX="443.0" layoutY="94.0" prefHeight="200.0" prefWidth="288.0" visible="false">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="203.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="3.0" style="-fx-arc-width: 75; -fx-arc-height: 75;" width="286.0" />
+            <TextArea fx:id="catTextArea" editable="false" layoutX="16.0" layoutY="8.0" prefHeight="184.0" prefWidth="255.0" wrapText="true">
+               <font>
+                  <Font name="Copperplate" size="15.0" />
+               </font>
+            </TextArea>
+         </children>
+      </Pane>
+      <ImageView fx:id="torchImage" fitHeight="32.0" fitWidth="38.0" layoutX="98.0" layoutY="484.0" onMouseClicked="#clickTorchGround" onMouseEntered="#onHoverInteractable" onMouseExited="#onLeaveInteractable" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/Torch.PNG" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <Pane fx:id="footprintPane" layoutX="-7.0" layoutY="75.0" prefHeight="462.0" prefWidth="751.0" visible="false">
+         <children>
+            <ImageView fx:id="footprint1Image" disable="true" fitHeight="86.0" fitWidth="33.0" layoutX="153.0" layoutY="399.0" onMouseEntered="#hoverFootprints" onMouseExited="#unhoverFootprints" opacity="0.33" pickOnBounds="true" preserveRatio="true" rotate="115.2">
+               <image>
+                  <Image url="@../images/PawprintImage.PNG" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="footprint2Image" disable="true" fitHeight="86.0" fitWidth="33.0" layoutX="213.0" layoutY="399.0" onMouseEntered="#hoverFootprints" onMouseExited="#unhoverFootprints" opacity="0.0" pickOnBounds="true" preserveRatio="true" rotate="93.8" visible="false">
+               <image>
+                  <Image url="@../images/PawprintImage.PNG" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="footprint3Image" disable="true" fitHeight="86.0" fitWidth="33.0" layoutX="272.0" layoutY="399.0" onMouseEntered="#hoverFootprints" onMouseExited="#unhoverFootprints" opacity="0.0" pickOnBounds="true" preserveRatio="true" rotate="105.9" visible="false">
+               <image>
+                  <Image url="@../images/PawprintImage.PNG" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="footprint4Image" disable="true" fitHeight="86.0" fitWidth="33.0" layoutX="333.0" layoutY="399.0" onMouseEntered="#hoverFootprints" onMouseExited="#unhoverFootprints" opacity="0.0" pickOnBounds="true" preserveRatio="true" rotate="110.0" visible="false">
+               <image>
+                  <Image url="@../images/PawprintImage.PNG" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="footprint5Image" disable="true" fitHeight="86.0" fitWidth="33.0" layoutX="395.0" layoutY="399.0" onMouseEntered="#hoverFootprints" onMouseExited="#unhoverFootprints" opacity="0.0" pickOnBounds="true" preserveRatio="true" rotate="113.6" visible="false">
+               <image>
+                  <Image url="@../images/PawprintImage.PNG" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="footprint6Image" disable="true" fitHeight="86.0" fitWidth="33.0" layoutX="456.0" layoutY="400.0" onMouseEntered="#hoverFootprints" onMouseExited="#unhoverFootprints" opacity="0.0" pickOnBounds="true" preserveRatio="true" rotate="79.7" visible="false">
+               <image>
+                  <Image url="@../images/PawprintImage.PNG" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="footprint7Image" disable="true" fitHeight="86.0" fitWidth="33.0" layoutX="502.0" layoutY="376.0" onMouseEntered="#hoverFootprints" onMouseExited="#unhoverFootprints" opacity="0.0" pickOnBounds="true" preserveRatio="true" rotate="-21.8" visible="false">
+               <image>
+                  <Image url="@../images/PawprintImage.PNG" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="footprint8Image" disable="true" fitHeight="86.0" fitWidth="33.0" layoutX="453.0" layoutY="341.0" onMouseEntered="#hoverFootprints" onMouseExited="#unhoverFootprints" opacity="0.0" pickOnBounds="true" preserveRatio="true" rotate="-90.0" visible="false">
+               <image>
+                  <Image url="@../images/PawprintImage.PNG" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="footprint9Image" disable="true" fitHeight="86.0" fitWidth="33.0" layoutX="389.0" layoutY="340.0" onMouseEntered="#hoverFootprints" onMouseExited="#unhoverFootprints" opacity="0.0" pickOnBounds="true" preserveRatio="true" rotate="-74.9" visible="false">
+               <image>
+                  <Image url="@../images/PawprintImage.PNG" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="footprint10Image" disable="true" fitHeight="86.0" fitWidth="33.0" layoutX="329.0" layoutY="325.0" onMouseEntered="#hoverFootprints" onMouseExited="#unhoverFootprints" opacity="0.0" pickOnBounds="true" preserveRatio="true" rotate="-60.3" visible="false">
+               <image>
+                  <Image url="@../images/PawprintImage.PNG" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="footprint11Image" disable="true" fitHeight="86.0" fitWidth="33.0" layoutX="272.0" layoutY="302.0" onMouseEntered="#hoverFootprints" onMouseExited="#unhoverFootprints" opacity="0.0" pickOnBounds="true" preserveRatio="true" rotate="-67.4" visible="false">
+               <image>
+                  <Image url="@../images/PawprintImage.PNG" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <ImageView fx:id="bushImage" disable="true" fitHeight="32.0" fitWidth="38.0" layoutX="223.0" layoutY="375.0" onMouseClicked="#clickBush" onMouseEntered="#onHoverInteractable" onMouseExited="#onLeaveInteractable" opacity="0.68" pickOnBounds="true" preserveRatio="true" rotate="-18.4">
+         <image>
+            <Image url="@../images/Leaves.PNG" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <Rectangle fx:id="replyRectangle" arcHeight="5.0" arcWidth="5.0" height="34.0" layoutX="-3.0" layoutY="519.0" opacity="0.75" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" visible="false" width="746.0" />
+      <TextField fx:id="replyTextField" layoutX="6.0" layoutY="523.0" onKeyPressed="#onPressKeyReply" prefHeight="25.0" prefWidth="657.0" promptText="Purr-sponse to the cat-tastic feline here" visible="false">
+         <font>
+            <Font name="Copperplate" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></TextField>
+      <ImageView fx:id="replyImage" fitHeight="35.0" fitWidth="32.0" layoutX="684.0" layoutY="521.0" onMouseClicked="#clickReply" onMouseEntered="#onHoverInteractable" onMouseExited="#onLeaveInteractable" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../images/replyButton.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <Label fx:id="hintsLabel" alignment="BOTTOM_LEFT" layoutX="320.0" layoutY="85.0" text="Hints: inf." textAlignment="RIGHT" textFill="WHITE">
+         <font>
+            <Font name="Copperplate" size="28.0" />
+         </font>
+      </Label>
+      <Rectangle fx:id="dim" arcHeight="5.0" arcWidth="5.0" height="550.0" opacity="0.46" stroke="TRANSPARENT" strokeType="INSIDE" strokeWidth="0.0" width="740.0" />
+      <ImageView fx:id="catImageAwoken" fitHeight="173.0" fitWidth="205.0" layoutX="487.0" layoutY="284.0" onMouseClicked="#clickCatAwoken" onMouseEntered="#onHoverInteractable" onMouseExited="#onLeaveInteractable" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../images/AwokenCat.PNG" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+      </ImageView>
+
+      <ImageView fx:id="settingButton" fitHeight="66.0" fitWidth="59.0" layoutX="665.0" layoutY="17.0" onMouseClicked="#onClickSetting" onMouseEntered="#onHoverInteractable" onMouseExited="#onLeaveInteractable" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/Settings.PNG" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <Glow />
+         </effect>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1c002ece" height="42.0" layoutX="122.0" layoutY="14.0" stroke="WHITE" strokeType="INSIDE" width="114.0" />
+      <Label fx:id="timer" alignment="CENTER" layoutX="122.0" layoutY="14.0" prefHeight="42.0" prefWidth="114.0" text="00:00" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Copperplate" size="30.0" />
+         </font>
+      </Label>
+      <Pane fx:id="hud" layoutX="257.0" layoutY="11.0" prefHeight="74.0" prefWidth="275.0">
+         <children>
+            <Rectangle fx:id="highlightTorch" arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="68.0" layoutX="1.0" layoutY="3.0" onMouseExited="#onLeaveTorch" smooth="false" stroke="#e1cf69" strokeType="INSIDE" visible="false" width="84.0" />
+            <Rectangle fx:id="highlightNote1" arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="68.0" layoutX="84.0" layoutY="3.0" onMouseExited="#onLeaveNote1" stroke="#e1cf69" strokeType="INSIDE" visible="false" width="84.0" />
+            <Rectangle fx:id="highlightNote2" arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="68.0" layoutX="167.0" layoutY="3.0" onMouseExited="#onLeaveNote2" stroke="#e1cf69" strokeType="INSIDE" visible="false" width="84.0" />
+            <ImageView fx:id="torch" fitHeight="36.0" fitWidth="60.0" layoutX="11.0" layoutY="22.0" onMouseClicked="#clickTorch" onMouseEntered="#onHoverTorch" visible="false">
+               <image>
+                  <Image url="@../images/Torch.PNG" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="OPEN_HAND" />
+               </cursor>
+            </ImageView>
+            <Label fx:id="torchCount" alignment="CENTER" layoutX="51.0" layoutY="3.0" prefHeight="0.0" prefWidth="30.0" text="x0" textAlignment="CENTER" textFill="WHITE" visible="false">
+               <font>
+                  <Font name="Apple Symbols" size="22.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="note1" fitHeight="51.0" fitWidth="45.0" layoutX="98.0" layoutY="14.0" onMouseClicked="#clickNote1" onMouseEntered="#onHoverNote1" visible="false">
+               <image>
+                  <Image url="@../images/Note1.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="OPEN_HAND" />
+               </cursor>
+            </ImageView>
+            <Label fx:id="note1Count" alignment="CENTER" layoutX="138.0" layoutY="3.0" prefHeight="0.0" prefWidth="30.0" text="x0" textAlignment="CENTER" textFill="WHITE" visible="false">
+               <font>
+                  <Font name="Apple Symbols" size="22.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="note2" fitHeight="65.0" fitWidth="52.0" layoutX="176.0" layoutY="7.0" onMouseClicked="#clickNote2" onMouseEntered="#onHoverNote2" visible="false">
+               <image>
+                  <Image url="@../images/Note2.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="OPEN_HAND" />
+               </cursor>
+            </ImageView>
+            <Label fx:id="note2Count" alignment="CENTER" layoutX="220.0" layoutY="3.0" prefHeight="0.0" prefWidth="30.0" text="x0" textAlignment="CENTER" textFill="WHITE" visible="false">
+               <font>
+                  <Font name="Apple Symbols" size="22.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <ImageView fx:id="catImageSleep" fitHeight="125.0" fitWidth="189.0" layoutX="486.0" layoutY="340.0" onMouseClicked="#catInitialise" onMouseEntered="#onHoverInteractable" onMouseExited="#onLeaveInteractable" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/SleepingCat.PNG" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+
+      <Pane fx:id="logPane" layoutX="479.0" prefHeight="200.0" prefWidth="202.0" visible="false">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1c002ecd" height="15.0" layoutX="53.0" layoutY="19.0" stroke="WHITE" strokeType="INSIDE" width="102.0" />
+            <Label fx:id="logLabel" alignment="CENTER" layoutX="54.0" layoutY="19.0" onMouseEntered="#onHoverLog" prefHeight="14.0" prefWidth="100.0" text="TASK LOG" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Copperplate" size="13.0" />
+               </font>
+            </Label>
+            <Rectangle fx:id="logBackground" arcHeight="5.0" arcWidth="5.0" fill="#210139cf" height="80.0" layoutX="53.0" layoutY="35.0" stroke="WHITE" strokeType="INSIDE" visible="false" width="102.0" />
+            <Label fx:id="task1" layoutX="62.0" layoutY="42.0" prefHeight="17.0" prefWidth="91.0" text="- ???" textFill="WHITE" visible="false">
+               <font>
+                  <Font name="Copperplate" size="11.0" />
+               </font>
+            </Label>
+            <Label fx:id="task2" layoutX="62.0" layoutY="64.0" prefHeight="17.0" prefWidth="91.0" text="- ???" textFill="WHITE" visible="false">
+               <font>
+                  <Font name="Copperplate" size="11.0" />
+               </font>
+            </Label>
+            <Label fx:id="task3" layoutX="62.0" layoutY="86.0" prefHeight="17.0" prefWidth="91.0" text="- ???" textFill="WHITE" visible="false">
+               <font>
+                  <Font name="Copperplate" size="11.0" />
+               </font>
+            </Label>
+            <Rectangle fx:id="logHover" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="95.0" layoutX="53.0" layoutY="19.0" onMouseExited="#onLeaveLog" opacity="0.0" stroke="BLACK" strokeType="INSIDE" visible="false" width="102.0" />
+         </children>
+      </Pane>
+      <Pane fx:id="note2Pane" prefHeight="543.0" prefWidth="737.0" visible="false">
+
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" height="567.0" layoutX="-8.0" layoutY="-8.0" opacity="0.76" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="766.0" />
+            <ImageView fitHeight="473.0" fitWidth="502.0" layoutX="115.0" layoutY="65.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/note2Screen.PNG" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="note2Return" fitHeight="76.0" fitWidth="101.0" layoutX="174.0" layoutY="81.0" onMouseClicked="#clickNote2Return" onMouseEntered="#onHoverInteractable" onMouseExited="#onLeaveInteractable" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/Back.PNG" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <Label alignment="TOP_CENTER" contentDisplay="CENTER" layoutX="166.0" layoutY="157.0" prefHeight="25.0" prefWidth="373.0" text="ENGINEER'S SCRAPBOOK" textAlignment="CENTER" wrapText="true">
+               <font>
+                  <Font name="Copperplate" size="27.0" />
+               </font>
+            </Label>
+            <Label alignment="TOP_LEFT" contentDisplay="CENTER" layoutX="198.0" layoutY="242.0" prefHeight="76.0" prefWidth="311.0" text="we've still yet fixed the right meow pad but we notice it detects dragging movement" textFill="#9a9a9a" wrapText="true">
+               <font>
+                  <Font name="Comic Sans MS" size="13.0" />
+               </font>
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </Label>
+         </children>
+      </Pane>
+      <Pane fx:id="note1Pane" layoutX="3.0" layoutY="2.0" prefHeight="543.0" prefWidth="737.0" visible="false">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" height="567.0" layoutX="-8.0" layoutY="-8.0" opacity="0.76" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="751.0" />
+            <ImageView fitHeight="515.0" fitWidth="525.0" layoutX="108.0" layoutY="42.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/note1Screen.PNG" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="note1Return" fitHeight="76.0" fitWidth="101.0" layoutX="174.0" layoutY="81.0" onMouseClicked="#clickNote1Return" onMouseEntered="#onHoverInteractable" onMouseExited="#onLeaveInteractable" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/Back.PNG" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <Label alignment="TOP_CENTER" contentDisplay="CENTER" layoutX="203.0" layoutY="157.0" prefHeight="103.0" prefWidth="326.0" text="LAUNCH MANUAL" textAlignment="CENTER" wrapText="true">
+               <font>
+                  <Font name="Copperplate" size="30.0" />
+               </font>
+            </Label>
+            <Label alignment="TOP_CENTER" contentDisplay="CENTER" layoutX="203.0" layoutY="245.0" prefHeight="46.0" prefWidth="326.0" text="HOLD THE MEOW PADS UNTIL THEY TURN ON" textAlignment="CENTER" wrapText="true">
+               <font>
+                  <Font name="Copperplate" size="21.0" />
+               </font>
+            </Label>
+            <Label alignment="TOP_CENTER" contentDisplay="CENTER" layoutX="203.0" layoutY="192.0" prefHeight="46.0" prefWidth="326.0" text="rewritten by the engineers for dummies ~" textAlignment="CENTER" textFill="#9a9a9a" wrapText="true">
+               <font>
+                  <Font name="Comic Sans MS" size="12.0" />
+               </font>
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </Label>
+            <Label alignment="TOP_LEFT" contentDisplay="CENTER" layoutX="215.0" layoutY="345.0" prefHeight="76.0" prefWidth="241.0" text="engineer's notes - the right meow pad seems to be faulty. " textFill="#9a9a9a" wrapText="true">
+               <font>
+                  <Font name="Comic Sans MS" size="12.0" />
+               </font>
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</Pane>

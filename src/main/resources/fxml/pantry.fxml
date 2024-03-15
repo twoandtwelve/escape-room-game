@@ -1,0 +1,422 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<Pane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyPressed="#onPressKey" prefHeight="550.0" prefWidth="740.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nz.ac.auckland.se206.controllers.PantryController">
+   <children>
+      <ImageView fx:id="pantryImage" fitHeight="576.0" fitWidth="750.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/Pantry.PNG" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="back" fitHeight="60.0" fitWidth="68.0" layoutX="6.0" layoutY="7.0" onMouseClicked="#clickBack" onMouseEntered="#onHoverInteractable" onMouseExited="#onLeaveInteractable" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/Back.PNG" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+
+      <ImageView fx:id="ingredientMilk" fitHeight="66.0" fitWidth="77.0" layoutX="151.0" layoutY="119.0" onMouseClicked="#clickIngredient" onMouseEntered="#onHoverInteractable" onMouseExited="#onLeaveInteractable" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/pantryFood/milk.PNG" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fx:id="ingredientCheese" fitHeight="49.0" fitWidth="63.0" layoutX="216.0" layoutY="130.0" onMouseClicked="#clickIngredient" onMouseEntered="#onHoverInteractable" onMouseExited="#onLeaveInteractable" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/pantryFood/cheese.PNG" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fx:id="ingredientCarrot" fitHeight="56.0" fitWidth="65.0" layoutX="298.0" layoutY="125.0" onMouseClicked="#clickIngredient" onMouseEntered="#onHoverInteractable" onMouseExited="#onLeaveInteractable" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/pantryFood/carrot.PNG" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fx:id="ingredientMushroom" fitHeight="64.0" fitWidth="64.0" layoutX="139.0" layoutY="238.0" onMouseClicked="#clickIngredient" onMouseEntered="#onHoverInteractable" onMouseExited="#onLeaveInteractable" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/pantryFood/mushroom.PNG" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fx:id="ingredientBeer" fitHeight="74.0" fitWidth="35.0" layoutX="236.0" layoutY="229.0" onMouseClicked="#clickIngredient" onMouseEntered="#onHoverInteractable" onMouseExited="#onLeaveInteractable" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/pantryFood/beer.PNG" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fx:id="ingredientBurger" fitHeight="66.0" fitWidth="77.0" layoutX="297.0" layoutY="235.0" onMouseClicked="#clickIngredient" onMouseEntered="#onHoverInteractable" onMouseExited="#onLeaveInteractable" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/pantryFood/burger.PNG" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fx:id="ingredientToast" fitHeight="66.0" fitWidth="77.0" layoutX="133.0" layoutY="356.0" onMouseClicked="#clickIngredient" onMouseEntered="#onHoverInteractable" onMouseExited="#onLeaveInteractable" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/pantryFood/toast.PNG" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fx:id="ingredientPudding" fitHeight="54.0" fitWidth="64.0" layoutX="213.0" layoutY="367.0" onMouseClicked="#clickIngredient" onMouseEntered="#onHoverInteractable" onMouseExited="#onLeaveInteractable" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/pantryFood/pudding.PNG" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fx:id="ingredientFish" fitHeight="66.0" fitWidth="77.0" layoutX="292.0" layoutY="364.0" onMouseClicked="#clickIngredient" onMouseEntered="#onHoverInteractable" onMouseExited="#onLeaveInteractable" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/pantryFood/fish.PNG" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fx:id="ingredientBanana" fitHeight="56.0" fitWidth="57.0" layoutX="416.0" layoutY="128.0" onMouseClicked="#clickIngredient" onMouseEntered="#onHoverInteractable" onMouseExited="#onLeaveInteractable" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/pantryFood/banana.PNG" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fx:id="ingredientLollipop" fitHeight="73.0" fitWidth="43.0" layoutX="503.0" layoutY="115.0" onMouseClicked="#clickIngredient" onMouseEntered="#onHoverInteractable" onMouseExited="#onLeaveInteractable" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/pantryFood/lollipop.PNG" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fx:id="ingredientMeat" fitHeight="50.0" fitWidth="94.0" layoutX="559.0" layoutY="131.0" onMouseClicked="#clickIngredient" onMouseEntered="#onHoverInteractable" onMouseExited="#onLeaveInteractable" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/pantryFood/meat.PNG" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fx:id="ingredientChicken" fitHeight="66.0" fitWidth="77.0" layoutX="417.0" layoutY="235.0" onMouseClicked="#clickIngredient" onMouseEntered="#onHoverInteractable" onMouseExited="#onLeaveInteractable" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/pantryFood/chicken.PNG" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fx:id="ingredientEgg" fitHeight="61.0" fitWidth="61.0" layoutX="496.0" layoutY="241.0" onMouseClicked="#clickIngredient" onMouseEntered="#onHoverInteractable" onMouseExited="#onLeaveInteractable" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/pantryFood/egg.PNG" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fx:id="ingredientPear" fitHeight="74.0" fitWidth="43.0" layoutX="577.0" layoutY="229.0" onMouseClicked="#clickIngredient" onMouseEntered="#onHoverInteractable" onMouseExited="#onLeaveInteractable" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/pantryFood/pear.PNG" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fx:id="ingredientHotdog" fitHeight="57.0" fitWidth="76.0" layoutX="410.0" layoutY="360.0" onMouseClicked="#clickIngredient" onMouseEntered="#onHoverInteractable" onMouseExited="#onLeaveInteractable" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/pantryFood/hotdog.PNG" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fx:id="ingredientIceCream" fitHeight="66.0" fitWidth="77.0" layoutX="503.0" layoutY="357.0" onMouseClicked="#clickIngredient" onMouseEntered="#onHoverInteractable" onMouseExited="#onLeaveInteractable" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/pantryFood/iceCream.PNG" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fx:id="ingredientOnigiri" fitHeight="57.0" fitWidth="57.0" layoutX="570.0" layoutY="366.0" onMouseClicked="#clickIngredient" onMouseEntered="#onHoverInteractable" onMouseExited="#onLeaveInteractable" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/pantryFood/onigiri.PNG" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fx:id="plantImage" disable="true" fitHeight="156.0" fitWidth="153.0" layoutX="8.0" layoutY="356.0" onMouseClicked="#clickPlant" onMouseEntered="#onHoverInteractable" onMouseExited="#onLeaveInteractable" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/Tree.PNG" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <Label fx:id="text" layoutX="278.0" layoutY="469.0" prefHeight="28.0" prefWidth="194.0" wrapText="true">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="result" layoutX="227.0" layoutY="188.0" prefHeight="34.0" prefWidth="297.0">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Label>
+      <Label fx:id="count" layoutX="583.0" layoutY="197.0">
+         <font>
+            <Font size="27.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="catImageSleep" fitHeight="125.0" fitWidth="189.0" layoutX="496.0" layoutY="407.0" onMouseClicked="#clickCatSleep" onMouseEntered="#onHoverInteractable" onMouseExited="#onLeaveInteractable" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/SleepingCat.PNG" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fx:id="catImageAwoken" fitHeight="173.0" fitWidth="205.0" layoutX="497.0" layoutY="343.0" onMouseClicked="#clickCatAwoken" onMouseEntered="#onHoverInteractable" onMouseExited="#onLeaveInteractable" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../images/AwokenCat.PNG" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+      </ImageView>
+      <ImageView fx:id="catImageActive" fitHeight="173.0" fitWidth="205.0" layoutX="573.0" layoutY="356.0" onMouseClicked="#clickCatActive" onMouseEntered="#onHoverInteractable" onMouseExited="#onLeaveInteractable" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../images/NeutralCat.PNG" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <Pane fx:id="chatPane" layoutX="454.0" layoutY="147.0" prefHeight="200.0" prefWidth="288.0" visible="false">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="203.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="3.0" style="-fx-arc-width: 75; -fx-arc-height: 75;" width="286.0" />
+            <TextArea fx:id="catTextArea" editable="false" layoutX="16.0" layoutY="8.0" prefHeight="184.0" prefWidth="255.0" wrapText="true">
+               <font>
+                  <Font name="Copperplate" size="15.0" />
+               </font>
+            </TextArea>
+         </children>
+      </Pane>
+      <Rectangle fx:id="replyRectangle" arcHeight="5.0" arcWidth="5.0" height="34.0" layoutX="-1.0" layoutY="520.0" opacity="0.75" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" visible="false" width="746.0" />
+      <TextField fx:id="replyTextField" layoutX="8.0" layoutY="524.0" onKeyPressed="#onPressKeyReply" prefHeight="25.0" prefWidth="657.0" promptText="Send meow-essage here!" visible="false">
+         <font>
+            <Font name="Copperplate" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </TextField>
+      <ImageView fx:id="replyImage" fitHeight="69.0" fitWidth="49.0" layoutX="683.0" layoutY="512.0" onMouseClicked="#clickReply" onMouseEntered="#onHoverInteractable" onMouseExited="#onLeaveInteractable" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../images/replyButton.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <Label fx:id="hintsLabel" alignment="BOTTOM_LEFT" layoutX="320.0" layoutY="85.0" text="Hints: inf." textAlignment="CENTER">
+         <font>
+            <Font name="Copperplate" size="25.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="settingButton" fitHeight="66.0" fitWidth="59.0" layoutX="665.0" layoutY="17.0" onMouseClicked="#onClickSetting" onMouseEntered="#onHoverInteractable" onMouseExited="#onLeaveInteractable" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/Settings.PNG" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <Glow />
+         </effect>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1c002ece" height="42.0" layoutX="122.0" layoutY="14.0" stroke="WHITE" strokeType="INSIDE" width="114.0" />
+      <Label fx:id="timer" alignment="CENTER" layoutX="122.0" layoutY="14.0" prefHeight="42.0" prefWidth="114.0" text="00:00" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Copperplate" size="30.0" />
+         </font>
+      </Label>
+      <Pane fx:id="logPane" layoutX="479.0" prefHeight="117.0" prefWidth="202.0" visible="false">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1c002ecc" height="15.0" layoutX="53.0" layoutY="19.0" stroke="WHITE" strokeType="INSIDE" width="102.0" />
+            <Label fx:id="logLabel" alignment="CENTER" layoutX="54.0" layoutY="19.0" onMouseEntered="#onHoverLog" prefHeight="14.0" prefWidth="100.0" text="TASK LOG" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Copperplate" size="13.0" />
+               </font>
+            </Label>
+            <Rectangle fx:id="logBackground" arcHeight="5.0" arcWidth="5.0" fill="#210139cf" height="80.0" layoutX="53.0" layoutY="35.0" stroke="WHITE" strokeType="INSIDE" visible="false" width="102.0" />
+            <Label fx:id="task1" layoutX="62.0" layoutY="42.0" prefHeight="17.0" prefWidth="91.0" text="- ???" textFill="WHITE" visible="false">
+               <font>
+                  <Font name="Copperplate" size="11.0" />
+               </font>
+            </Label>
+            <Label fx:id="task2" layoutX="62.0" layoutY="64.0" prefHeight="17.0" prefWidth="91.0" text="- ???" textFill="WHITE" visible="false">
+               <font>
+                  <Font name="Copperplate" size="11.0" />
+               </font>
+            </Label>
+            <Label fx:id="task3" layoutX="62.0" layoutY="86.0" prefHeight="17.0" prefWidth="91.0" text="- ???" textFill="WHITE" visible="false">
+               <font>
+                  <Font name="Copperplate" size="11.0" />
+               </font>
+            </Label>
+            <Rectangle fx:id="logHover" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="95.0" layoutX="53.0" layoutY="19.0" onMouseExited="#onLeaveLog" opacity="0.0" stroke="BLACK" strokeType="INSIDE" visible="false" width="102.0" />
+         </children>
+      </Pane>
+      <Pane fx:id="hud" layoutX="257.0" layoutY="11.0" prefHeight="74.0" prefWidth="275.0">
+         <children>
+            <Rectangle fx:id="highlightTorch" arcHeight="5.0" arcWidth="5.0" fill="#e1cf6900" height="68.0" layoutX="1.0" layoutY="3.0" onMouseExited="#onLeaveTorch" smooth="false" stroke="#e1cf69" strokeType="INSIDE" visible="false" width="84.0" />
+            <Rectangle fx:id="highlightNote1" arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="68.0" layoutX="84.0" layoutY="3.0" onMouseExited="#onLeaveNote1" stroke="#e1cf69" strokeType="INSIDE" visible="false" width="84.0" />
+            <Rectangle fx:id="highlightNote2" arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="68.0" layoutX="167.0" layoutY="3.0" onMouseExited="#onLeaveNote2" stroke="#e1cf69" strokeType="INSIDE" visible="false" width="84.0" />
+            <ImageView fx:id="torch" fitHeight="36.0" fitWidth="60.0" layoutX="11.0" layoutY="22.0" onMouseEntered="#onHoverTorch" visible="false">
+               <image>
+                  <Image url="@../images/Torch.PNG" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="OPEN_HAND" />
+               </cursor>
+            </ImageView>
+            <Label fx:id="torchCount" alignment="CENTER" layoutX="51.0" layoutY="3.0" prefHeight="0.0" prefWidth="30.0" text="x0" textAlignment="CENTER" textFill="WHITE" visible="false">
+               <font>
+                  <Font name="Apple Symbols" size="22.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="note1" fitHeight="51.0" fitWidth="45.0" layoutX="98.0" layoutY="14.0" onMouseClicked="#clickNote1" onMouseEntered="#onHoverNote1" visible="false">
+               <image>
+                  <Image url="@../images/Note1.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="OPEN_HAND" />
+               </cursor>
+            </ImageView>
+            <Label fx:id="note1Count" alignment="CENTER" layoutX="138.0" layoutY="3.0" prefHeight="0.0" prefWidth="30.0" text="x0" textAlignment="CENTER" textFill="WHITE" visible="false">
+               <font>
+                  <Font name="Apple Symbols" size="22.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="note2" fitHeight="65.0" fitWidth="52.0" layoutX="176.0" layoutY="7.0" onMouseClicked="#clickNote2" onMouseEntered="#onHoverNote2" visible="false">
+               <image>
+                  <Image url="@../images/Note2.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="OPEN_HAND" />
+               </cursor>
+            </ImageView>
+            <Label fx:id="note2Count" alignment="CENTER" layoutX="220.0" layoutY="3.0" prefHeight="0.0" prefWidth="30.0" text="x0" textAlignment="CENTER" textFill="WHITE" visible="false">
+               <font>
+                  <Font name="Apple Symbols" size="22.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane fx:id="note2Pane" layoutX="3.0" layoutY="5.0" prefHeight="543.0" prefWidth="737.0" visible="false">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" height="560.0" layoutX="-8.0" layoutY="-8.0" opacity="0.76" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="751.0" />
+            <ImageView fitHeight="473.0" fitWidth="502.0" layoutX="132.0" layoutY="70.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/note2Screen.PNG" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="note2Return" fitHeight="76.0" fitWidth="101.0" layoutX="191.0" layoutY="86.0" onMouseClicked="#clickNote2Return" onMouseEntered="#onHoverInteractable" onMouseExited="#onLeaveInteractable" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/Back.PNG" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <Label alignment="TOP_CENTER" contentDisplay="CENTER" layoutX="182.0" layoutY="162.0" prefHeight="25.0" prefWidth="373.0" text="ENGINEER'S SCRAPBOOK" textAlignment="CENTER" wrapText="true">
+               <font>
+                  <Font name="Copperplate" size="27.0" />
+               </font>
+            </Label>
+            <Label alignment="TOP_LEFT" contentDisplay="CENTER" layoutX="205.0" layoutY="244.0" prefHeight="76.0" prefWidth="297.0" text="we've still yet fixed the right meow pad but we notice it detects dragging movement" textFill="#9a9a9a" wrapText="true">
+               <font>
+                  <Font name="Comic Sans MS" size="13.0" />
+               </font>
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </Label>
+         </children>
+      </Pane>
+
+      <Pane fx:id="note1Pane" layoutX="1.0" prefHeight="560.0" prefWidth="737.0" visible="false">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" height="566.0" layoutX="-8.0" layoutY="-8.0" opacity="0.76" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="751.0" />
+            <ImageView fitHeight="515.0" fitWidth="525.0" layoutX="111.0" layoutY="43.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/note1Screen.PNG" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="note1Return" fitHeight="76.0" fitWidth="101.0" layoutX="177.0" layoutY="82.0" onMouseClicked="#clickNote1Return" onMouseEntered="#onHoverInteractable" onMouseExited="#onLeaveInteractable" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/Back.PNG" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <Label alignment="TOP_CENTER" contentDisplay="CENTER" layoutX="203.0" layoutY="157.0" prefHeight="103.0" prefWidth="326.0" text="LAUNCH MANUAL" textAlignment="CENTER" wrapText="true">
+               <font>
+                  <Font name="Copperplate" size="30.0" />
+               </font>
+            </Label>
+            <Label alignment="TOP_CENTER" contentDisplay="CENTER" layoutX="203.0" layoutY="246.0" prefHeight="46.0" prefWidth="326.0" text="HOLD THE MEOW PADS UNTIL THEY TURN ON" textAlignment="CENTER" wrapText="true">
+               <font>
+                  <Font name="Copperplate" size="21.0" />
+               </font>
+            </Label>
+            <Label alignment="TOP_CENTER" contentDisplay="CENTER" layoutX="206.0" layoutY="194.0" prefHeight="46.0" prefWidth="326.0" text="rewritten by the engineers for dummies ~" textAlignment="CENTER" textFill="#9a9a9a" wrapText="true">
+               <font>
+                  <Font name="Comic Sans MS" size="12.0" />
+               </font>
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </Label>
+            <Label alignment="TOP_LEFT" contentDisplay="CENTER" layoutX="206.0" layoutY="347.0" prefHeight="76.0" prefWidth="241.0" text="engineer's notes - the right meow pad seems to be faulty. " textFill="#9a9a9a" wrapText="true">
+               <font>
+                  <Font name="Comic Sans MS" size="12.0" />
+               </font>
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </Label>
+         </children>
+      </Pane>
+
+   </children>
+</Pane>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="740.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nz.ac.auckland.se206.controllers.LossController">
+   <children>
+      <ImageView fitHeight="550.0" fitWidth="799.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/Lose.PNG" />
+         </image>
+      </ImageView>
+      <Label alignment="CENTER" layoutX="394.0" layoutY="283.0" prefHeight="50.0" prefWidth="218.0" text="try again?" textAlignment="CENTER" textFill="#fffbb2" wrapText="true">
+         <font>
+            <Font name="Copperplate" size="41.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="67.0" layoutY="160.0" prefHeight="57.0" prefWidth="185.0" text="YOU" textAlignment="CENTER" textFill="#fffbb2" wrapText="true">
+         <font>
+            <Font name="Copperplate" size="81.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="77.0" layoutY="222.0" prefHeight="83.0" prefWidth="302.0" text="LOST..." textAlignment="CENTER" textFill="#fffbb2" wrapText="true">
+         <font>
+            <Font name="Copperplate" size="81.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="exit" fitHeight="58.0" fitWidth="130.0" layoutX="499.0" layoutY="337.0" onMouseClicked="#clickExit" onMouseEntered="#onHoverInteractable" onMouseExited="#onLeaveInteractable" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/exit.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+   </children>
+</Pane>
